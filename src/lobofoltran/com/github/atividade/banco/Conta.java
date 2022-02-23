@@ -7,6 +7,7 @@ public class Conta {
 	String numero;
 	String tipoconta;
 	Double valor;
+	Integer conta = 0;
 	
 	public Conta(String nome, Double saldo, String numero, String tipoconta) {
 		this.nome = nome;
@@ -19,7 +20,6 @@ public class Conta {
 		this.valor = valor;
 		Double desconto = 0.00;
 		if (this.tipoconta.equals("PJ")) {
-			System.out.println("Entrou na validação 1");
 			desconto = (valor*2)/100;
 			saldo = (saldo + valor) - desconto;
 			return saldo;
@@ -32,12 +32,39 @@ public class Conta {
 	
 	public Double sacar(Double valor) {
 		this.valor = valor;
-		
-		if (this.tipoconta == "PJ") {
-			return saldo = (saldo - valor);
+		Double desconto = 0.00;
+		if (this.tipoconta.equals("PF")) {
+			if (valor > saldo) {
+				System.out.println("Conta PF nÃ£o pode ficar com saldo negativo!");
+				return saldo + conta;
+			}
+			conta++;
+			if (conta > 3) {
+				desconto = (valor*1)/100; 
+				saldo = (saldo - valor) - desconto;
+				return saldo + conta;
+			} else {
+				saldo = (saldo - valor);
+				return saldo + conta;
+			}
 		} else {
-			return saldo = (saldo - valor);
+			conta++;
+			if (this.conta > 3) {
+				desconto = (valor*2)/100; 
+				saldo = (saldo - valor) - desconto;
+				return saldo + conta;
+			} else {
+				saldo = (saldo - valor);
+				return saldo + conta;
+			}
 		}
+	}
+	
+	public void dados() {
+		System.out.println("Nome: " + nome);
+		System.out.println("Saldo: " + saldo);
+		System.out.println("Numero: " + numero);
+		System.out.println("Tipo conta: " + tipoconta);
 		
 	}
 }
