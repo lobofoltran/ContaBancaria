@@ -4,6 +4,8 @@ public class Aplicacao {
 
 	public static void main(String[] args) {
 		Conta conta1 = new Conta("Gustavo Lobo", 500.00, "123456", "PF");
+		
+		// exemplos 3 funções
 		conta1.dados();
 		
 		conta1.sacar(100.0);
