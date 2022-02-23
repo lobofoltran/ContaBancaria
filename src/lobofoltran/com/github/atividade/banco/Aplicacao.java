@@ -3,14 +3,15 @@ package lobofoltran.com.github.atividade.banco;
 public class Aplicacao {
 
 	public static void main(String[] args) {
-		Conta conta1 = new Conta("João da Silva", 100.00, "123456", "PJ");
-		System.out.println(conta1.saldo);
-		
-		conta1.depositar(100.0);
-		System.out.println(conta1.saldo);
+		Conta conta1 = new Conta("Gustavo Lobo", 500.00, "123456", "PF");
+		conta1.dados();
 		
 		conta1.sacar(100.0);
-		System.out.println(conta1.saldo);
+		System.out.println("Novo saldo: " + conta1.saldo);
+		
+		conta1.depositar(100.0);
+		System.out.println("Novo saldo: " + conta1.saldo);
+		
 	}
 
 }
