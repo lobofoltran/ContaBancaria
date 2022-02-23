@@ -35,7 +35,8 @@ Crie dois objetos da conta e “brinque” com os métodos de sacar e depositar.
 
 ## Realização, dificuldades e conclusão:
 
-- Tive dificuldade ao criar a regra de limite de três saques, depois que entendi e comecei a utilizar ela como um objeto, foi fácil.
+- Tive dificuldade ao criar a regra de limite de três saques, depois que entendi e comecei a utilizar ela como um objeto foi fácil.
+- Em geral a lógica de algoritmos continua sempre a mesma.
 - Códigos (Aplicacao.java):
 
 ```ruby
