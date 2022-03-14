@@ -25,7 +25,7 @@ public class ContaPR extends ContaBancaria {
 		this.valor = valor;
 		Double desconto = 0.00;
 		if (this.valor > saldo) {
-			System.out.println("Conta PF n„o pode ficar com saldo negativo!");
+			System.out.println("Conta PR n√£o pode ficar com saldo negativo!");
 			return saldo + conta;
 		}
 		conta++;
