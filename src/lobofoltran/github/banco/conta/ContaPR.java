@@ -6,7 +6,7 @@ public class ContaPR extends ContaBancaria {
 	
 	public ContaPR (String nome, Double saldo, String numero, String tipo, String porte) {
 		super(nome, saldo, numero, tipo);
-		this.porte = porte;
+		setPorte(this.porte);
 	}
 
 	@Override
@@ -24,7 +24,7 @@ public class ContaPR extends ContaBancaria {
 	public void sacar (Double valor) {
 		Double desconto = 0.00;
 		if (valor > getSaldo()) {
-			System.out.println("Conta PR n„o pode ficar com saldo negativo!");
+			System.out.println("Conta PR n√£o pode ficar com saldo negativo!");
 			return;
 		}
 		saquesDisponiveis++;
