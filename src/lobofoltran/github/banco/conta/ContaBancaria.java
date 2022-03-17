@@ -8,7 +8,7 @@ public class ContaBancaria implements IDetalhesConta {
 	private Double saldo;
 	private String numero;
 	private String tipo;
-	protected String porte;
+	private String porte;
 
 	public ContaBancaria(String nome, Double saldo, String numero, String tipo) {
 		this.nome = nome;
@@ -39,6 +39,10 @@ public class ContaBancaria implements IDetalhesConta {
 	
 	public String getPorte () {
 		return porte;
+	}
+	
+	protected String setPorte (String porte) {
+		this.porte = porte;
 	}
 	
 	public void sacar (Double valor) {
